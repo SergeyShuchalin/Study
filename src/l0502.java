@@ -1,8 +1,8 @@
 public class l0502 {
     public static void main(String[] args) {
         System.out.println(0b101 >> 1);
-        /*System.out.println(Integer.toBinaryString(5 >> 1));
-        System.out.println(Integer.toBinaryString(0b101 >> 1));*/
+        System.out.println(Integer.toBinaryString(5 >> 1));
+        System.out.println(Integer.toBinaryString(0b101 >> 1));
 //        printBinaryString(5>>1);
 //        printBinaryString(5);
 //        printBinaryString(0b101>>2);
