@@ -1,13 +1,15 @@
+package Progran;
+
 public class Program {
     public static void main(String[] args) {
-//        Person p1 = new Person(); // создали объект(экземпляр класса)
+//        Progran.Person p1 = new Progran.Person(); // создали объект(экземпляр класса)
 //        p1.displayInfo();
 
 //        p1.name = "Виктор";
 //        p1.age = 28;
 //        p1.displayInfo();
 
-//        Person p2 = new Person("Игорь");
+//        Progran.Person p2 = new Progran.Person("Игорь");
 //        p2.displayInfo();
 //
         Person p3 = new Person("Валентин", 25);
@@ -16,7 +18,7 @@ public class Program {
         p3.setAge(36);
         p3.displayInfo();
 
-//        Person p4 = new Person(30);
+//        Progran.Person p4 = new Progran.Person(30);
 //        p4.displayInfo();
     }
 }
