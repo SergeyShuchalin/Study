@@ -8,7 +8,7 @@ public class Human {
     private String city;
     private String address;
 
-    
+
     Human(String firstname, String birthday, String phone, String country, String city, String address) {
         this.name = firstname;
         this.birthday = birthday;
@@ -75,7 +75,6 @@ public class Human {
         System.out.printf("Страна: %s%n", this.country);
         System.out.printf("Город: %s%n", this.city);
         System.out.printf("Домашний адрес: %s%n", this.address);
-        System.out.println("===============================================");
     }
 
 }

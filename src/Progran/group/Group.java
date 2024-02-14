@@ -1,5 +1,7 @@
 package Progran.group;
 
+import java.util.Random;
+
 public class Group {
     public static void main(String[] args) {
         int n = 10;
@@ -15,11 +17,26 @@ public class Group {
         students[8] = new Student("Волков", "К.П.", 3);
         students[9] = new Student("Колганов", "А.В", 3);
 
+        Random rd = new Random();
+
+        for (int i = 0; i < students.length; i++) {
+            for (int j = 0; j < students.length; j++) {
+                students[i].addGrade(rd.nextInt(12) + 1);
+            }
+        }
+
+
         System.out.println("Все студенты");
         for (int i = 0; i < students.length; i++) {
             students[i].print();
         }
+        System.out.println("Студенты с хорошей успеваемостью");
+        for (int i = 0; i < students.length; i++) {
+            if(students[i].isGood()){
+                students[i].print();
+            }
 
+        }
 
     }
 }
