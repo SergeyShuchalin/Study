@@ -21,4 +21,21 @@ public class Namber {
         }
         return nm;
     }
+    public static double average  (int... num){
+        int n = 0;
+        double sr;
+        for (int j : num) {
+            n += j;
+
+        }
+      return  sr = n / (double)num.length;
+
+    }
+    public static int factorial (int n){
+        int f = 1;
+        for (int i = 1; i <= n; i++) {
+            f *= i;
+        }
+        return f;
+    }
 }
