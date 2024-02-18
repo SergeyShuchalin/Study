@@ -3,7 +3,9 @@ package Test;
 //Родительский класс
 public class Test {
     public static void main(String[] args) {
-//        Line l1 = new Line();
+        Line l1 = new Line();
+//        l1.setId(5);
+        System.out.println(l1.getId());
 //        l1.color = "red";
 //        l1.width = 5;
 //        l1.x1 = l1.x2 = 0;
@@ -16,68 +18,80 @@ public class Test {
 //        p.width = 1;
 //        p.showProp();
 //        l1.showId();
-Object g1 = new Line();
-Object g2 = new Triangle();
-Object g3 = new Properties();
+//        Object g1 = new Line();
+//        Object g2 = new Triangle();
+//        Object g3 = new Properties();
 
 //Line l1 = (Line) g1;
 //Line l2 = (Line) g2;
-        System.out.println(g1 instanceof Line);
-        System.out.println(g2 instanceof Line);
-
-        Line l11 = null, l22 = null;
-        if(g1 instanceof  Line)
-            l11 = (Line) g1;
-
-        if(g2 instanceof  Line)
-            l22 = (Line) g2;
+//        System.out.println(g1 instanceof Line);
+//        System.out.println(g2 instanceof Line);
+//
+//        Line l11 = null, l22 = null;
+//        if(g1 instanceof  Line)
+//            l11 = (Line) g1;
+//
+//        if(g2 instanceof  Line)
+//            l22 = (Line) g2;
     }
 }
 
-class Properties {
-    int width;
-    String color;
-    int id = 1;
+        class Properties {
+            int width;
+            String color;
+//            protected int id = 1;
+            final int id = 1;
 
-    public Properties() {
-        System.out.println("Конструктор Properties");
+//            final void setId(int id) {
+//                if (id > 0)
+//                this.id = id;
+//            }
 
-    }
+            public int getId() {
+                return id;
+            }
 
-    public Properties(int width, String color) {
-        this.width = width;
-        this.color = color;
-        System.out.println("Конструктор Properties(width, color)");
-    }
+            public Properties() {
+                System.out.println("Конструктор Properties");
 
-//    void showProp() {
-        void show(){
-        System.out.println("Ширина - " + this.width + "px, Цвет - " + this.color);
-    }
-}
+            }
 
-class Line extends Properties {
-    double x1, y1;
-    double x2, y2;
-    int id = 2;
+            public Properties(int width, String color) {
+                this.width = width;
+                this.color = color;
+                System.out.println("Конструктор Properties(width, color)");
+            }
 
-    public Line() {
-        super(0," ");
-        System.out.println("Конструктор Line");
-    }
-@Override
-    void show() {
-        super.show();
-        System.out.println("Координаты линии - x1: " + this.x1 + ", x2: " + this.x2 + ", y1: " + this.y1 + ", y2: " + this.y2);
-    }
-    void showId(){
-        System.out.println("id = " + this.id + ", super.id = " + super.id);
-    }
-}
+            //    void showProp() {
+            void show() {
+                System.out.println("Ширина - " + this.width + "px, Цвет - " + this.color);
+            }
+        }
 
-class Triangle extends Properties {
-    double x1, y1;
-    double x2, y2;
-    double x3, y3;
+        class Line extends Properties {
+            double x1, y1;
+            double x2, y2;
+            int id = 2;
 
-}
+            public Line() {
+                super(0, " ");
+                System.out.println("Конструктор Line");
+            }
+
+            @Override
+            void show() {
+                super.show();
+                System.out.println("Координаты линии - x1: " + this.x1 + ", x2: " + this.x2 + ", y1: " + this.y1 + ", y2: " + this.y2);
+            }
+
+            void showId() {
+//                System.out.println("id = " + this.id + ", super.id = " + super.id);
+            }
+        }
+
+        class Triangle extends Properties {
+            double x1, y1;
+            double x2, y2;
+            double x3, y3;
+
+        }
